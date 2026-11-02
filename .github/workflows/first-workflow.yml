@@ -1,0 +1,24 @@
+
+name: My First GitHub Action
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  PROJECT_NAME: GitHub Actions Practice
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Welcome
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Display project name
+        run: echo "Project: $PROJECT_NAME"
+
+      - name: Display date
+        run: date
